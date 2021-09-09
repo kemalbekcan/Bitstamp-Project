@@ -5,9 +5,145 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 20, 30);
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.leftbar{
+  margin-top: 30px;
+  width: 20%;
+}
+
+.center{
+  width: 50%;
+  margin-top: 10px;
+}
+
+.rightbar{
+  margin-top: 10px;
+  width: 30%;
+}
+
+.askTable{
+  width: 100%;
+  overflow-x:auto;
+}
+
+.askTable tbody tr .price{
+  color: red;
+}
+
+.askTable tbody tr .amount{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.askTable thead tr th{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bids {
+  width: 100%;
+  overflow-x:auto;
+  margin-top: 10px;
+}
+
+.bids tbody tr .price{
+  color: green;
+}
+
+.bids thead tr th{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bids tbody tr .amount{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.liveOrdersTable{
+  width: 100%;
+  display: block;
+  max-height: 610px;
+  overflow-y: scroll;
+  padding: 15px;
+}
+
+.liveOrdersTable thead tr th{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.liveOrdersTable tbody tr .amount, .dateTime{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.liveTickerTable{
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.liveTickerTable th, td {
+  text-align: center;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px) {
+  body{
+    width: 992px;
+  }
+  .content {
+    display: block !important;
+    margin: 0;
+    padding: 0;
+  }
+  .leftbar{
+    display: flex;
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .center{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .liveTickerArea{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .liveTickerTable, th,td{
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    padding: 5px;
+  }
+  .liveOrdersTable, th, td{
+    margin-left: auto;
+    margin-right: auto;
+    width: 992px;
+    padding: 5px;
+  }
+  .liveOrdersArea{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
 }
